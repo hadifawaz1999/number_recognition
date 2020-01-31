@@ -31,11 +31,3 @@ def transform_labels(y_train,y_test):
   new_y_train = new_y_train_test[0:len(y_train)]
   new_y_test = new_y_train_test[len(y_train):]
   return new_y_train, new_y_test
-
-xtrain,ytrain,xtest,ytest=load_data_mnnist()
-for i in range(ytrain.shape[0]):
-  if ytrain[i]==2:
-    xtrain[i].shape=(28,28)
-    plt.imshow(xtrain[i],cmap='gray')
-    plt.show()
-    break
